@@ -5,7 +5,7 @@ read -p "Enter your GitHub username: " GITHUB_USERNAME
 read -p "Enter the name of your configuration repository: " REPO_NAME
 
 # Install dependencies
-sudo pacman -Sy git base-devel swww hyprlock hypridle waypaper mako wl-clipboard wl-clip-persist udiskie bluez bluez-utils blueman pipewire-pulse networkmanager kio-admin kio-gdrive qt5-wayland qt6-wayland yazi file ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-cascadia-code-nerd ttf-fantasque-nerd ttf-firacode-nerd ttf-hack-nerd ttf-roboto-mono-nerd ttf-ubutu-nerd ttf-jetbrains-mono-nerd ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick vlc timg lua luarocks neovim kate
+sudo pacman -Sy git base-devel swww hyprlock hypridle waypaper mako wl-clipboard wl-clip-persist udiskie bluez bluez-utils blueman pipewire-pulse networkmanager kio-admin kio-gdrive qt5-wayland qt6-wayland yazi file ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-cascadia-code-nerd ttf-fantasque-nerd ttf-firacode-nerd ttf-hack-nerd ttf-roboto-mono-nerd ttf-ubutu-nerd ttf-jetbrains-mono-nerd ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick vlc timg lua luarocks neovim kate xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 
 # Clone the repository
 echo "Cloning your configuration repository from GitHub..."

@@ -1,0 +1,27 @@
+cat << EOF > ~/.config/wofi/style-powermenu.css
+/* Wofi Power Menu Style - Nord Theme */
+
+window {
+    width: 200px;
+    height: 250px;
+    border: 2px solid #BF616A; /* nord11 */
+    background-color: #2E3440; /* nord0 */
+    border-radius: 12px;
+    font-family: 'FiraCode Nerd Font', sans-serif;
+}
+
+#input {
+    visibility: hidden;
+}
+
+#entry {
+    padding: 10px;
+    color: #D8DEE9; /* nord4 */
+    border-radius: 8px;
+}
+
+#entry:selected {
+    background-color: #BF616A; /* nord11 */
+    color: #2E3440; /* nord0 */
+}
+EOF

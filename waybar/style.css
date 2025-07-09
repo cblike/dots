@@ -1,0 +1,52 @@
+/* Nord Theme for Waybar */
+@define-color nord0 #2E3440;  /* Polar Night */
+@define-color nord1 #3B4252;
+@define-color nord3 #4C566A;
+@define-color nord4 #D8DEE9;  /* Snow Storm */
+@define-color nord6 #ECEFF4;
+@define-color nord7 #8FBCBB;  /* Frost */
+@define-color nord8 #88C0D0;
+@define-color nord9 #81A1C1;
+@define-color nord10 #5E81AC;
+@define-color nord11 #BF616A; /* Aurora */
+@define-color nord12 #D08770;
+@define-color nord13 #EBCB8B;
+@define-color nord14 #A3BE8C;
+@define-color nord15 #B48EAD;
+
+window#waybar {
+    background: transparent;
+    font-family: 'FiraCode Nerd Font', sans-serif;
+    font-size: 14px;
+    color: @nord4;
+}
+
+#waybar.empty #window { background: none; }
+
+#workspaces, #clock, #battery, #pulseaudio, #network, #cpu, #memory, #tray, #custom-appmenu, #custom-powermenu {
+    background-color: @nord1;
+    border: 1px solid @nord3;
+    border-radius: 12px;
+    padding: 2px 12px;
+    margin: 4px;
+}
+
+#workspaces button { padding: 0 5px; color: @nord4; background-color: transparent; border-radius: 8px; transition: all 0.3s ease; }
+#workspaces button:hover { background-color: @nord3; color: @nord6; }
+#workspaces button.focused { background-color: @nord8; color: @nord0; }
+#workspaces button.urgent { background-color: @nord11; color: @nord0; }
+
+#clock { background-color: @nord10; color: @nord0; }
+#battery { background-color: @nord14; color: @nord0; }
+#battery.charging, #battery.plugged { background-color: @nord13; color: @nord0; }
+#battery.critical:not(.charging) { background-color: @nord11; color: @nord0; animation-name: blink; animation-duration: 0.5s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate; }
+#pulseaudio { background-color: @nord15; color: @nord0; }
+#pulseaudio.muted { background-color: @nord3; color: @nord5; }
+#network { background-color: @nord7; color: @nord0; }
+#network.disconnected { background-color: @nord11; }
+#cpu { background-color: @nord12; color: @nord0; }
+#memory { background-color: @nord13; color: @nord0; }
+#custom-appmenu { background-color: @nord9; color: @nord0; font-size: 18px; padding: 2px 14px; }
+#custom-powermenu { background-color: @nord11; color: @nord0; font-size: 16px; padding: 2px 14px; }
+
+@keyframes blink { to { background-color: @nord1; color: @nord11; } }

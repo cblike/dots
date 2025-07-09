@@ -1,0 +1,47 @@
+/* Wofi App Launcher Style */
+
+window {
+    margin: 0px;
+    border: 2px solid #88C0D0; /* nord8 */
+    background-color: #2E3440; /* nord0 */
+    border-radius: 12px;
+    font-family: 'FiraCode Nerd Font', sans-serif;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #D8DEE9; /* nord4 */
+    background-color: #3B4252; /* nord1 */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #2E3440; /* nord0 */
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #2E3440; /* nord0 */
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #D8DEE9; /* nord4 */
+}
+
+#entry:selected {
+    background-color: #88C0D0; /* nord8 */
+    color: #2E3440; /* nord0 */
+    border-radius: 8px;
+}

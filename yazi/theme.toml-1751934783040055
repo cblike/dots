@@ -1,0 +1,87 @@
+# ~/.config/yazi/theme.toml
+# A Yazi theme based on the popular Nord color palette.
+# This version uses more vibrant accent colors for better contrast.
+# Place this file in your Yazi configuration directory.
+
+[manager]
+# Default text color and background color.
+foreground = "#E5E9F0"
+background = "#2E3440"
+
+# Color of the current working directory in the header.
+cwd          = { fg = "#88C0D0", bold = true, underline = true }
+
+# Border colors of the manager view.
+border       = "#4C566A"
+border_symbol = "│"
+
+# Highlight color for the selected item.
+hightlighted = { fg = "#2E3440", bg = "#B48EAD" }
+highlight_symbol = "❯ "
+
+[status]
+# Colors for the status bar at the bottom.
+separator_fg = "#4C566A"
+
+# Mode indicator (e.g., "NORMAL", "SELECT").
+mode_normal = { fg = "#ECEFF4", bg = "#5E81AC", bold = true }
+mode_select = { fg = "#2E3440", bg = "#A3BE8C", bold = true }
+mode_unset  = { fg = "#ECEFF4", bg = "#BF616A", bold = true }
+
+# Progress bar for file operations.
+progress_normal = { fg = "#88C0D0" }
+progress_error  = { fg = "#BF616A" }
+
+# Permissions display.
+permissions_t = { fg = "#A3BE8C" }
+permissions_r = { fg = "#EBCB8B" }
+permissions_w = { fg = "#D08770" }
+permissions_x = { fg = "#BF616A" }
+permissions_s = { fg = "#B48EAD" }
+
+[select]
+# Appearance of the selection list when selecting multiple files.
+border = { fg = "#4C566A" }
+active = { fg = "#88C0D0", bold = true }
+
+[input]
+# Appearance of the input dialog (e.g., for renaming or creating files).
+border       = { fg = "#4C566A" }
+title        = { bold = true }
+value        = { }
+value_valid  = { fg = "#A3BE8C" }
+value_invalid = { fg = "#BF616A" }
+
+[completion]
+# Appearance of the command completion menu.
+border = { fg = "#4C566A" }
+active = { fg = "#ECEFF4", bg = "#434C5E" }
+inactive = { }
+
+[filetype]
+# Rules for coloring different file types.
+rules = [
+    # Directories - Using MIME type for better matching
+    { mime = "inode/directory", fg = "#88C0D0", bold = true },
+
+    # Symlinks
+    { is = "link", fg = "#8FBCBB", italic = true },
+
+    # Media files
+    { name = "*.{png,jpg,jpeg,gif,webp,ico}", fg = "#B48EAD" },
+    { name = "*.{mp4,mkv,mov,avi,webm,flv}", fg = "#B48EAD" },
+    { name = "*.{mp3,flac,wav,ogg,m4a}", fg = "#B4EAD" },
+
+    # Archives
+    { name = "*.{zip,tar,gz,bz2,xz,rar,7z}", fg = "#EBCB8B" },
+
+    # Executables and scripts
+    { is = "exec", fg = "#A3BE8C" },
+    { name = "*.{sh,bash,zsh,fish}", fg = "#A3BE8C" },
+
+    # Config files
+    { name = "*.{toml,json,yaml,yml,conf,ini}", fg = "#D08770" },
+
+    # Documents
+    { name = "*.{md,txt,org,pdf,djvu}", fg = "#D8DEE9" },
+]
